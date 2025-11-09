@@ -1,0 +1,10 @@
+html,body{height:100%;margin:0}
+body{font-family:system-ui,Segoe UI,Roboto,Arial;background:#f7f8fb}
+.toolbar{height:48px;background:#fff;border-bottom:1px solid #e8eaf0;display:flex;align-items:center;justify-content:space-between;padding:0 12px}
+.tools > *{margin-right:8px}
+.canvas-wrap{position:relative;height:calc(100% - 48px)}
+canvas{position:absolute;left:0;top:0;width:100%;height:100%}
+#main{z-index:1;background:#fff}
+#cursors{z-index:2;pointer-events:none}
+.users{display:flex;gap:8px}
+.user-badge{padding:4px 8px;border-radius:12px;font-size:12px}

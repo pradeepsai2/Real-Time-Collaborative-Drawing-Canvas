@@ -1,0 +1,22 @@
+{
+  "name": "collaborative-canvas",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:client": "esbuild client/src/main.ts --bundle --outfile=client/dist/bundle.js --minify --sourcemap",
+    "build:server": "tsc -p server/tsconfig.json",
+    "build": "npm run build:client && npm run build:server",
+    "start": "node server/dist/server.js",
+    "dev": "concurrently \"tsc -w -p server/tsconfig.json\" \"esbuild client/src/main.ts --bundle --outfile=client/dist/bundle.js --sourcemap --watch\" \"nodemon --watch server/dist server/dist/server.js\""
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "esbuild": "^0.18.0",
+    "nodemon": "^2.0.0",
+    "typescript": "^5.0.0"
+  }
+}
